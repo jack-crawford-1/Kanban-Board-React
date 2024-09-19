@@ -1,6 +1,6 @@
 # Kanban Board Front-End
 
-![alt text](image.png)
+![demo image](image.png)
 
 This is a Kanban Board application built using **React**, and **TypeScript** with the **dnd-kit library** enabling the creation, updating, and deletion of tasks and columns with drag and drop functionality.
 
