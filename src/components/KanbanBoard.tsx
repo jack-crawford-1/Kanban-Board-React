@@ -66,7 +66,7 @@ function KanbanBoard() {
           </div>
           <button
             onClick={() => createNewColumn()}
-            className="flex flex-row justify-around h-[60px] w-[350px] border border-2 rounded-lg bg-slate-800 p-4 text-white ring-rose-500 curser-pointer"
+            className="ml-4 flex flex-row justify-around h-[60px] w-[300px] border border-2 rounded-lg bg-slate-800 p-4 text-white ring-green-500 curser-pointer hover:text-green-500"
           >
             <PlusIcon />
             Add Column

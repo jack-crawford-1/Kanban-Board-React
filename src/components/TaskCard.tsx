@@ -43,7 +43,7 @@ function TaskCard({ task, deleteTask, updateTask }: Props) {
       <div
         ref={setNodeRef}
         style={style}
-        className="bg-slate-800 p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl border-2 border-red-400 cursor-grab relative cursor-grab opacity-50"
+        className="bg-slate-800 p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl border-2 border-green-500 cursor-grab relative cursor-grab opacity-50 "
       />
     );
   }
@@ -85,7 +85,7 @@ function TaskCard({ task, deleteTask, updateTask }: Props) {
       style={style}
       {...attributes}
       {...listeners}
-      className="bg-mainBackgroundColor p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl hover:ring-2 hover:ring-inset hover:ring-green-500 cursor-grab relative cursor-grab task"
+      className=" p-2.5 h-[100px] min-h-[100px] items-center flex text-left rounded-xl hover:ring-2 hover:ring-inset hover:ring-green-500 ring-inset ring-white text-white bg-slate-700 opacity-90 ring-[1px] cursor-grab relative cursor-grab task"
       onClick={toggleEditMode}
       onMouseEnter={() => {
         setMouseIsOver(true);
@@ -100,7 +100,7 @@ function TaskCard({ task, deleteTask, updateTask }: Props) {
 
       {mouseIsOver && (
         <button
-          className="stroke-white aboslute right-4 top-1/2 tranlate-y-1/2 bg-red-500 rounded opacity-40 hover:stroke-red-400 hover:opacity-100"
+          className="stroke-white aboslute right-4 top-1/2 tranlate-y-1/2 bg-green-500 rounded opacity-40 hover:stroke-red-500 hover:opacity-100"
           onClick={() => {
             deleteTask(task.id);
           }}

@@ -56,7 +56,7 @@ const ColumnContainer = (props: ColumnContainerProps) => {
       <div
         ref={setNodeRef}
         style={style}
-        className="bg-slate-600 w-[350px] h-[500px] max-h-[500px] rounded-md flex flex-col opacity-60 border-4 border-rose-500"
+        className="bg-slate-600 w-[350px] h-[500px] max-h-[500px] rounded-md flex flex-col opacity-60 border-4 border-green-500"
       ></div>
     );
   }
@@ -71,7 +71,7 @@ const ColumnContainer = (props: ColumnContainerProps) => {
         {...attributes}
         {...listeners}
         onClick={() => setEditMode(true)}
-        className="bg-slate-700 rounded-md rounded-b-none h-[60px] text-md p-3 font-bold border-4 border-green-400 cursor-grab flex justify-between items-center"
+        className="bg-slate-700 rounded-md rounded-b-none h-[60px] text-md p-3 font-bold border-4 border-green-500 cursor-grab flex justify-between items-center"
       >
         <div className="flex items-center gap-2">
           <div className="flex justify-center items-center bg-slate-600 px-2 py-1 text-sm rounded-full">
@@ -83,7 +83,7 @@ const ColumnContainer = (props: ColumnContainerProps) => {
 
             {editMode && (
               <input
-                className="bg-slate-900 focus:border-rose-500 border rounded-md p-1 outline-none px-2"
+                className="bg-slate-800 focus:border-green-500 border rounded-lg p-1 outline-none px-2"
                 autoFocus
                 value={column.title}
                 onChange={(e) => updateColumn(column.id, e.target.value)}
@@ -100,7 +100,7 @@ const ColumnContainer = (props: ColumnContainerProps) => {
         </div>
 
         <button
-          className="stroke-gray-500 hover:stroke-white"
+          className="stroke-gray-500 hover:stroke-red-500"
           onClick={(e) => {
             e.stopPropagation();
             deleteColumn(column.id);
@@ -123,9 +123,9 @@ const ColumnContainer = (props: ColumnContainerProps) => {
         </SortableContext>
       </div>
 
-      <div className="max-h-[60px] min-h-[60px] bg-slate-900">
+      <div className="max-h-[60px] min-h-[60px] bg-slate-800 border border-2 border-white rounded-xl">
         <button
-          className="w-full flex gap-2 items-center border-2 border-slate-600 rounded-md p-4 hover:text-green-500 hover:bg-slate-900 active:bg-slate-900"
+          className="w-full flex gap-2 items-center border border-white rounded-md p-4 hover:text-green-500 hover:bg-slate-900 active:bg-slate-900"
           onClick={() => {
             createTask(column.id);
           }}
